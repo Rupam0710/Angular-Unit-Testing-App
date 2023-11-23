@@ -1,3 +1,5 @@
 To run all the folders together - ng test
 
 To run a specific folder - ng test --include src\app\foldername
+
+To generate karma.config file - ng g config karma
