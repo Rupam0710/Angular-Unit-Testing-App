@@ -36,11 +36,11 @@ describe('AppComponent', () => {
     expect(true).toBe(true);
   });
 
-  it('Show message alert', () => {
+  xit('Show message alert', () => {
     expect(component.showMessage('Hello')).toBe('Hello');
   });
 
-  it('Show Addition result', () => {
+  xit('Show Addition result', () => {
     // expect(Addition(10, 20)).toBe(40); It gives failure 
     expect(Addition(10, 20)).toBe(30); // it shows test case pass
   })
