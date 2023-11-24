@@ -1,7 +1,10 @@
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { Addition } from './calculator';
 
 describe('AppComponent', () => {
+
+  const component = new AppComponent();
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [
@@ -31,5 +34,14 @@ describe('AppComponent', () => {
 
   it('My testcase', () => {
     expect(true).toBe(true);
+  });
+
+  it('Show message alert', () => {
+    expect(component.showMessage('Hello')).toBe('Hello');
+  });
+
+  it('Show Addition result', () => {
+    // expect(Addition(10, 20)).toBe(40); It gives failure 
+    expect(Addition(10, 20)).toBe(30); // it shows test case pass
   })
 });

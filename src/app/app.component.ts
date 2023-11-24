@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Angular-Testing-App';
+
+  showMessage(msg: string): string {
+    return msg;
+  }
 }

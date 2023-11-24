@@ -1,5 +1,13 @@
-To run all the folders together - ng test
+1. To run all the folders together - ng test
 
-To run a specific folder - ng test --include src\app\foldername
+2. To run a specific folder - ng test --include src\app\foldername
 
-To generate karma.config file - ng g config karma
+3. To generate karma.config file - ng g config karma
+
+4. Exclude Angular Unit Test Case from Execution
+   
+   Case using 'x' keyword we can exclude any test case from Execution
+
+   xit('Show Addition result', ()=>{
+    expect(Addition(10,20)).toBeGreaterThan(20);
+   })
