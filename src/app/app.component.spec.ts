@@ -40,8 +40,8 @@ describe('AppComponent', () => {
     expect(component.showMessage('Hello')).toBe('Hello');
   });
 
-  xit('Show Addition result', () => {
+  it('Show Addition result', () => {
     // expect(Addition(10, 20)).toBe(40); It gives failure 
-    expect(Addition(10, 20)).toBe(30); // it shows test case pass
+    expect(Addition(10, 20)).toBeLessThanOrEqual(30); // it shows test case pass
   })
 });

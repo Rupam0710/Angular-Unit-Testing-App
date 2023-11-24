@@ -11,3 +11,16 @@
    xit('Show Addition result', ()=>{
     expect(Addition(10,20)).toBeGreaterThan(20);
    })
+
+5. Matchers in angular unit test case
+
+   What are matchers?
+    
+   a. Matchers are nothing but compare functions to actually compare the expected and actual result in the test specs
+   b. Matchers are javascript function that does a boolean comparision between an actual output and an expected output
+   c. There are 2 types of matchers Inbuilt matcher and Custom Matchers.
+
+   d. Inbuilt matchers - matchers which are built in the jasmine framework are called inbuilt matcher.The user can easily use it implicitly.
+   ex - toBe , toBeGreaterThan ,toBeGreaterThanOrEqual, toBeLessThanOrEqual ,toBeNull, etc 
+
+   e. Custom Matchers - The matchers which are not present in the inbuilt system library of Jasmine is called as custom matcher. Custom matcher needs to be drfined explicitly().
