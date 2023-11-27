@@ -28,3 +28,33 @@
 6. ToBe and ToEqual in-built matcher in angular unit test
 
    We can use toBe for primitives like string,boolean and number. For everything else we use toEqual 
+
+7.  in-built matcher in angular Unit test
+
+    tobe(true)
+    matcher function performs the test: actual === expected
+    syntax: expect(flag).toBe(true/false)
+    the test passes only if the flag has the value true
+    in the case of expect(flag).tobe(true)
+
+    tobeTrue()
+    matcher function performs the test: (actual === true || is(actual,'boolean') && actual.valueOf())
+    syntax: expect(flag).tobeTrue()
+    this function behaves the same way as tobe(true) but handles an additional case
+    tobe(true) -> only handles primitive boolean type
+    tobeTrue() -> handles primitive boolean type and a boolean object
+
+    tobeTruthy()
+    This boolean matcher is used in jasmine to check whether the result is equal to true or false.
+
+    tobeFalsy()
+     This boolean matcher is used in jasmine to check whether the result is equal to true or false.
+     It matches the output to be false whereas toBeTruthy matches the output to be true.
+
+    expect(true).toBeTruthy(); -> true 
+    expect('1').toBeTruthy(); -> true 
+    expect(0).toBeTruthy(); -> false
+    expect(undefined).toBeTruthy(); -> false
+    expect(NaN).toBeTruthy(); -> false
+    expect(false).toBeTruthy(); -> false 
+    expect('').toBeTruthy(); -> false 

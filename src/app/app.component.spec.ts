@@ -20,13 +20,25 @@ describe('AppComponent', () => {
 
   it('ToBe and ToEqual test case', () => {
 
-    // var a = 'hello';
-    // var b = 'hello';
-    // expect(a).toBe(b); //returns true for string , boolean and number ( for primitive)
+    //tobe(true)
+    var a = 'hello';
+    expect(a).toBe('hello');
 
-    var c = ['1'];
-    var d = ['1'];
-    // expect(c).toBe(d); //returns false for non primitive type
-    expect(c).toEqual(d); //returns true for non primitive
+    //tobeTrue()
+    var a = true;
+    expect(a).toBeTrue();
+
+    //tobeFalse()
+    var a = false;
+    expect(a).toBeFalse();
+
+    //tobeTruthy()
+    var a = true;
+    expect(a).toBeTruthy();
+
+    //tobeFalsy()
+    var a = true;
+    expect(undefined).toBeFalsy("abc");
+
   })
 });
