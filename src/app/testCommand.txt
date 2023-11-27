@@ -24,3 +24,7 @@
    ex - toBe , toBeGreaterThan ,toBeGreaterThanOrEqual, toBeLessThanOrEqual ,toBeNull, etc 
 
    e. Custom Matchers - The matchers which are not present in the inbuilt system library of Jasmine is called as custom matcher. Custom matcher needs to be drfined explicitly().
+
+6. ToBe and ToEqual in-built matcher in angular unit test
+
+   We can use toBe for primitives like string,boolean and number. For everything else we use toEqual 

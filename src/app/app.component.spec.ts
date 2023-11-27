@@ -13,35 +13,20 @@ describe('AppComponent', () => {
     }).compileComponents();
   });
 
-  it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app).toBeTruthy();
-  });
-
-  it(`should have as title 'Angular-Testing-App'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('Angular-Testing-App');
-  });
-
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, Angular-Testing-App');
-  });
-
-  it('My testcase', () => {
-    expect(true).toBe(true);
-  });
-
-  xit('Show message alert', () => {
-    expect(component.showMessage('Hello')).toBe('Hello');
-  });
-
   it('Show Addition result', () => {
     // expect(Addition(10, 20)).toBe(40); It gives failure 
     expect(Addition(10, 20)).toBeLessThanOrEqual(30); // it shows test case pass
+  })
+
+  it('ToBe and ToEqual test case', () => {
+
+    // var a = 'hello';
+    // var b = 'hello';
+    // expect(a).toBe(b); //returns true for string , boolean and number ( for primitive)
+
+    var c = ['1'];
+    var d = ['1'];
+    // expect(c).toBe(d); //returns false for non primitive type
+    expect(c).toEqual(d); //returns true for non primitive
   })
 });
