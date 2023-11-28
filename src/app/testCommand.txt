@@ -58,3 +58,18 @@
     expect(NaN).toBeTruthy(); -> false
     expect(false).toBeTruthy(); -> false 
     expect('').toBeTruthy(); -> false 
+
+8. in-built matcher in angular unit test 
+   
+   toBeGreaterThan(expected value)
+   toBeGreaterThan(expected value) is a comparision function that evaluates to true or false 
+
+   toBeGreaterThanOrEqual(expected value)
+   toBeGreaterThanOrEqual(expected value) is a comparision function that evaluates to true or false
+
+
+   toBeLessThan(expected value)
+   toBeGreaterThan(expected value) is a comparision function that evaluates to true or false 
+
+   toBeLessThanOrEqual(expected value)
+   toBeGreaterThanOrEqual(expected value) is a comparision function that evaluates to true or false

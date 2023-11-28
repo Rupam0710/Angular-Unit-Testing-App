@@ -20,25 +20,20 @@ describe('AppComponent', () => {
 
   it('ToBe and ToEqual test case', () => {
 
-    //tobe(true)
-    var a = 'hello';
-    expect(a).toBe('hello');
+    // tobeGreaterThan(expectedValue)
+    var a = 5;
+    expect(a).toBeGreaterThan(4);
 
-    //tobeTrue()
-    var a = true;
-    expect(a).toBeTrue();
+    // toBeGreaterThanOrEqual(expectedValue)
+    var b = 3;
+    expect(b).toBeGreaterThanOrEqual(3);
 
-    //tobeFalse()
-    var a = false;
-    expect(a).toBeFalse();
+    //toBeLessThan(expectedValue)
+    var c = 2;
+    expect(c).toBeLessThan(5);
 
-    //tobeTruthy()
-    var a = true;
-    expect(a).toBeTruthy();
-
-    //tobeFalsy()
-    var a = true;
-    expect(undefined).toBeFalsy("abc");
-
+    //toBeLessThanOrEqual(expected value)
+    var d = 2;
+    expect(d).toBeLessThanOrEqual(2);
   })
 });
