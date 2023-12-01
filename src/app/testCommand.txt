@@ -73,3 +73,35 @@
 
    toBeLessThanOrEqual(expected value)
    toBeGreaterThanOrEqual(expected value) is a comparision function that evaluates to true or false
+
+9.ToMatch()
+
+  The ToMatch matcher should be applied successfully for regular expression
+
+  .it('Jasmine Matcher - Math function',()=>{
+   var input = "The dotnetoffice tutorial";
+   var strPhone = "001-789-56-67";
+   expect(input).toMatch(/dotnetoffice/);
+   expect(input).toMatch(/dotnetoffice/i);
+   expect(input).not.toMatch(/dot1/);
+   expect(strPhone).toMatch(/\d{3}-\d{3}-\d{2}-\d{2}/);
+  })
+
+10. tobeCloseTo()
+
+   This matcher is used to check whether a number is close to another number , up to a given level of decimal precision.
+
+   In our case, we checked whether the expected number was equal to the actual number with a given level of decimal precision.
+
+   .it('Jasmine Matcher - tobeCloseTo',()=>{
+   var pi = 3.1415926, e =2.78;
+   expect(pi).not.tobeCloseTo(e);
+   expect(pi).tobeCloseTo(e,0);
+   expect(4.334).tobeCloseTo(4.334);
+   expect(4.334).tobeCloseTo(4.3345,1);
+   expect(4.334).tobeCloseTo(4.3345,2);
+   expect(4.334).tobeCloseTo(4.3,2);
+   expect(4.223).tobeCloseTo(4.22,3);
+   expect(4.223).tobeCloseTo(4.22,4);
+
+  })

@@ -13,27 +13,50 @@ describe('AppComponent', () => {
     }).compileComponents();
   });
 
-  it('Show Addition result', () => {
-    // expect(Addition(10, 20)).toBe(40); It gives failure 
-    expect(Addition(10, 20)).toBeLessThanOrEqual(30); // it shows test case pass
+  it('Jasmine Matcher - Math function', () => {
+    // Test input strings
+    var input = "The dotnetoffice tutorial";
+    var strPhone = "001-789-56-67";
+
+    // Test if 'input' contains the substring "dotnetoffice" (case-sensitive)
+    expect(input).toMatch(/dotnetoffice/);
+
+    // Test if 'input' contains the substring "dotnetoffice" (case-insensitive)
+    expect(input).toMatch(/dotnetoffice/i);
+
+    // Test if 'input' does not contain the substring "dot1"
+    expect(input).not.toMatch(/dot1/);
+
+    // Test if 'strPhone' matches the pattern of "###-###-##-##" where # represents a digit
+    expect(strPhone).toMatch(/\d{3}-\d{3}-\d{2}-\d{2}/);
   })
 
-  it('ToBe and ToEqual test case', () => {
+  it('Jasmine Matcher - toBeCloseTo', () => {
+    var pi = 3.1415926, e = 2.78;
 
-    // tobeGreaterThan(expectedValue)
-    var a = 5;
-    expect(a).toBeGreaterThan(4);
+    // Check if pi is not close to e
+    expect(pi).not.toBeCloseTo(e);
 
-    // toBeGreaterThanOrEqual(expectedValue)
-    var b = 3;
-    expect(b).toBeGreaterThanOrEqual(3);
+    // Check if pi is close to e with 0 precision (exact match)
+    expect(pi).toBeCloseTo(e, 0);
 
-    //toBeLessThan(expectedValue)
-    var c = 2;
-    expect(c).toBeLessThan(5);
+    // Check if 4.334 is close to 4.334 with default precision
+    expect(4.334).toBeCloseTo(4.334);
 
-    //toBeLessThanOrEqual(expected value)
-    var d = 2;
-    expect(d).toBeLessThanOrEqual(2);
-  })
+    // Check if 4.334 is close to 4.3345 with 1 decimal point precision
+    expect(4.334).toBeCloseTo(4.3345, 1);
+
+    // Check if 4.334 is close to 4.3345 with 2 decimal points precision
+    expect(4.334).toBeCloseTo(4.3345, 2);
+
+    //  4.334 is not close to 4.3 with 2 decimal points precision
+    expect(4.334).not.toBeCloseTo(4.3, 2);
+
+    // 4.223 is not close to 4.22 with 3 decimal points precision
+    expect(4.223).not.toBeCloseTo(4.22, 3);
+
+    // 4.223 is not close to 4.22 with 4 decimal points precision
+    expect(4.223).not.toBeCloseTo(4.22, 4);
+  });
+
 });
