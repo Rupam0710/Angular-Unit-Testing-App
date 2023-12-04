@@ -13,49 +13,37 @@ describe('AppComponent', () => {
     }).compileComponents();
   });
 
-  it('Jasmine Matcher - toBeDefined', function () {
-    var MyObj = {
-      foo: "foo"
-    };
-    var Myfunction = (function () { })();
-    var strUndefined;
+  it('Jasmine Matcher - toBeNull', function () {
+    var nullValue = null;
+    var valueUndefined;
+    var notNull = 'notNull';
+    expect(null).toBeNull();
+    expect(nullValue).toBeNull();
+    expect(valueUndefined).not.toBeNull();
+    expect(notNull).not.toBeNull();
+  })
 
-    // Check if the string "The dotnet office" is defined
-    expect("The dotnet office").toBeDefined();
+  it('Jasmine Matcher - toContain', function () {
+    var MyArray = ['jasmine', 'karma', 'Dotnetoffice'];
+    expect([1, 2, 3]).toContain[2];
+    expect([1, 2, 3]).toContain(2, 3);
+    expect(MyArray).toContain("jasmine");
+    expect([1, 2, 3]).not.toContain(4);
+    expect(MyArray).not.toContain("dot");
+  })
 
-    // Check if the object MyObj is defined
-    expect(MyObj).toBeDefined();
+  it('Jasmine Matcher - toBeNaN', function () {
+    expect(0 / 0).toBeNaN();
+    expect(0 / 5).not.toBeNaN();
+  })
 
-    // Check if the property foo in MyObj is defined
-    expect(MyObj.foo).toBeDefined();
+  it('Jasmine Matcher - toBePositiveInfinity', function () {
+    expect(1 / 0).toBePositiveInfinity();
 
-    // Check if the function Myfunction is not defined
-    expect(Myfunction).not.toBeDefined();
+  })
 
-    // Check if the variable strUndefined is not defined
-    expect(strUndefined).not.toBeDefined();
-  });
+  it('Jasmine Matcher - toBeNegativeInfinity', function () {
+    expect(-1 / 0).toBeNegativeInfinity();
 
-  it('Jasmine Matcher - toBeUndefined', function () {
-    var MyObj = {
-      foo: "foo"
-    };
-    var Myfunction = (function () { })();
-    var strUndefined;
-
-    // Check if the object MyObj is not undefined
-    expect(MyObj).not.toBeUndefined();
-
-    // Check if the property foo in MyObj is not undefined
-    expect(MyObj.foo).not.toBeUndefined();
-
-    // Check if the function Myfunction is undefined
-    expect(Myfunction).toBeUndefined();
-
-    // Check if the variable strUndefined is undefined
-    expect(strUndefined).toBeUndefined();
-  });
-
-
-
+  })
 });

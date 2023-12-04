@@ -138,3 +138,48 @@
        expect(Myfunction).toBeUndefined();
        expect(strUndefined).toBeUndefined();
     })
+
+13. toBeNull() - it should be applied successfully to compare against null
+
+    it('Jasmine Matcher - toBeNull',function(){
+       var nullValue = null;
+       var valueUndefined;
+       var notNull = 'notNull';
+       expect(null).toBeNull();
+       expect(nullValue).toBeNull();
+       expect(valueUndefined).not.toBeNull();
+       expect(notNull).not.toBeNull();
+    })    
+
+14. toContain() - it should be applied successfully for finding an item in an array.
+    
+    it('Jasmine Matcher - toContain',function(){
+       var MyArray = ['jasmine','karma','Dotnetoffice'];
+       expect([1,2,3]).toContain([2]);
+       expect([1,2,3]).toContain(2,3);
+       expect(MyArray).toContain("jasmine");
+       expect([1,2,3]).not.toContain(4);
+       expect(MyArray).not.toContain("dot");
+    })   
+
+15. tobeNan() - it should be applied successfully for finding an Undetermined value
+
+   it('Jasmine Matcher - tobeNaN',function(){
+       expect(0/0).toBeNaN();
+       expect(0/5).not.toBeNaN();
+    })  
+
+16. toBePositiveInfinity() - it should be applied successfully for finding an positive infinte value
+
+   it('Jasmine Matcher - toBePositiveInfinity',function(){
+       expect(1/0).toBePositiveInfinity();
+       
+    })
+
+17. toBeNegativeInfinty() - it should be applied successfully for finding an negative infinte value
+
+   it('Jasmine Matcher - toBeNegativeInfinity',function(){
+       expect(-1/0).toBeNegativeInfinity();
+       
+    })     
+    
